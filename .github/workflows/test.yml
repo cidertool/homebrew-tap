@@ -1,0 +1,19 @@
+name: test
+on: 
+  push:
+    paths:
+    - '**.rb'
+
+jobs:
+  test:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update Homebrew
+        run: brew update >/dev/null
+      - name: Audit formulae
+        run: brew audit ./Formula/*.rb
+      - name: Install formulae
+        run: brew install -v ./Formula/*.rb
+      - name: Test formulae
+        run: brew test ./Formula/*.rb
