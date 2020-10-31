@@ -2,21 +2,21 @@
 class Cider < Formula
   desc "Submit your builds to the Apple App Store in seconds"
   homepage "https://cidertool.github.io/cider"
-  version "0.0.7"
+  version "0.0.8"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/cidertool/cider/releases/download/v0.0.7/cider_darwin_x86_64.tar.gz"
-    sha256 "0d4ba998b62fd98c383dc2c948ce99ad59bea9a78fe3b61eed3212084a9a95bd"
+    url "https://github.com/cidertool/cider/releases/download/v0.0.8/cider_darwin_x86_64.tar.gz"
+    sha256 "7b7fde98e47b876ef0a04bf91c425b7d3f224bf68d7cbd4ac2c2daed4e2649e2"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/cidertool/cider/releases/download/v0.0.7/cider_linux_x86_64.tar.gz"
-      sha256 "0e6c02c7456ad75aa0bfde1e554c41034df724980fbdca55210f069564e6b9b7"
+      url "https://github.com/cidertool/cider/releases/download/v0.0.8/cider_linux_x86_64.tar.gz"
+      sha256 "ed8f613e511e3fc5dff71fc90ea98a345e2fbb4d7b0d5621e338b34d537e919f"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/cidertool/cider/releases/download/v0.0.7/cider_linux_arm64.tar.gz"
-        sha256 "2f2d60ffa243bedb64cbc75f72085bfb4906bbaee9e588f5c7548d6f6d02ac47"
+        url "https://github.com/cidertool/cider/releases/download/v0.0.8/cider_linux_arm64.tar.gz"
+        sha256 "b75da3826d317d33cacd1a50266d85b7584d932efbeb9e0e2aaacf253a18f99e"
       else
       end
     end
